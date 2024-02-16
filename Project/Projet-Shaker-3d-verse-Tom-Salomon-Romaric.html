@@ -1,0 +1,57 @@
+/
+/
+GTech1Paris2024
+API Access
+Initiate a rendering session or use the Asset API with a Token or an API Key.
+Public Token
+User Tokens
+API Keys
+Public Token
+Never expires
+
+public_MuurkrLaaBSeHmx9
+What is a Public Token?
+The Public token provides READ access to all assets inside the Public folder.
+
+It is safe to expose client-side.
+
+What is it used for?
+Use it to start and connect to a new session with the Livelink.js SDKjoinOrStartSessionmethod.
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta content="width=device-width,initial-scale=1.0" name="viewport" />
+    </head>
+        
+    <body>
+        <div class="canvas-container">
+        <!-- CANVAS -->
+        <canvas
+            id="display-canvas"
+            oncontextmenu="event.preventDefault()"
+            style="width: 100vw; height: 100vh;"
+            tabindex="1"
+        ></canvas>
+        </div>
+            
+        <!-- LIVELINK SDK -->
+        <script src="https://cdn.3dverse.com/legacy/sdk/stable/SDK3DVerse.js"></script>
+    
+        <!-- APP ENTRYPOINT -->
+        <script type="module">
+        async function initApp() {
+            await SDK3DVerse.joinOrStartSession({
+                userToken: "public_MuurkrLaaBSeHmx9",
+                sceneUUID: "b9fa4671-4bb9-410b-a752-6927d3ef7a67",
+                canvas: document.getElementById("display-canvas"),
+                viewportProperties: {
+                    defaultControllerType: SDK3DVerse.controller_type.orbit,
+                },
+            });
+        }
+        window.addEventListener("load", initApp);
+        </script>
+    </body>
+</html>
+3dverse Console
