@@ -1,0 +1,1 @@
+It's a 3dverse project i've made at Gaming campus school, with my colleagues Tom and Romaric, we're created the "shaker" a real room of Gaming campus Paris, and we had a lot of video games references.
